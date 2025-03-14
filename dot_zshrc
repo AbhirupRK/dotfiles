@@ -74,5 +74,5 @@ unset __mamba_setup
 # <<< mamba initialize <<<
 
 # Environment variables
-export PATH=$PATH:"$HOME/.local/bin:$HOME/.opt/scripts:$HOME/.opt/miktex-bin"
+export PATH=$PATH:"$HOME/.local/bin:$HOME/.local/opt/scripts:$HOME/.local/opt/miktex-bin"
 
