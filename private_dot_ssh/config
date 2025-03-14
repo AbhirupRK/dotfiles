@@ -1,0 +1,71 @@
+Host *
+  ForwardAgent yes
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+Host aws
+  HostName 13.233.246.99
+  User ubuntu
+  Port 22
+  IdentityFile ~/.ssh/aws.pem
+
+Host ps
+  HostName 10.171.17.201
+  User 18ts91r01
+
+Host ps-remote
+  HostName paramshakti.iitkgp.ac.in
+  User 18ts91r01
+  Port 4422
+
+Host leonardo
+  HostName login.leonardo.cineca.it
+  User aroykarm
+
+Host g100
+  HostName login.g100.cineca.it
+  User aroykarm
+  StrictHostKeyChecking no
+  UserKnownHostsFile=/dev/null
+
+Host dcfe109
+  Hostname 192.168.4.109
+  User abhirup
+
+Host hilbert
+  Hostname 192.168.4.245
+  KexAlgorithms diffie-hellman-group1-sha1
+  HostKeyAlgorithms=+ssh-rsa
+  HostKeyAlgorithms=+ssh-dss
+  User abhirup
+# RequestTTY yes
+# RemoteCommand .local/bin/zsh
+
+Host dcfe136
+  Hostname 192.168.4.136
+  KexAlgorithms diffie-hellman-group1-sha1
+  HostKeyAlgorithms=+ssh-rsa
+  HostKeyAlgorithms=+ssh-dss
+  User abhirup
+# RequestTTY yes
+# RemoteCommand .local/bin/zsh
+
+Host hilbert-fw
+  Hostname istm-fw.istm.cnr.it
+  KexAlgorithms diffie-hellman-group1-sha1
+  HostKeyAlgorithms=+ssh-rsa
+  HostKeyAlgorithms=+ssh-dss
+  User abhirup
+  Port 2226
+# RequestTTY yes
+# RemoteCommand .local/bin/zsh
+
+Host dcfe136-fw
+  Hostname istm-fw.istm.cnr.it
+  KexAlgorithms diffie-hellman-group1-sha1
+  HostKeyAlgorithms=+ssh-rsa
+  HostKeyAlgorithms=+ssh-dss
+  User abhirup
+  Port 2227
+# RequestTTY yes
+# RemoteCommand .local/bin/zsh
