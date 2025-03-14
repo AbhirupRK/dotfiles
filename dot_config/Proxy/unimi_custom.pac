@@ -5,7 +5,7 @@ if (shExpMatch(host,"*.cilea.it") ||
 shExpMatch(host,"cas.unimi.it"))
 return "DIRECT";
 if (shExpMatch(host, "scholar.google.com") ||
-shExpMatch(host, "journals.aps.org") ||
+// shExpMatch(host, "journals.aps.org") ||
 shExpMatch(host, "www.nature.com") ||
 shExpMatch(host, "pubs.acs.org") ||
 shExpMatch(host, "www.sciencedirect.com") ||
