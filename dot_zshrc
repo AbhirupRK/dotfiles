@@ -76,4 +76,8 @@ unset __mamba_setup
 
 # Environment variables
 export PATH=$PATH:"$HOME/.local/bin:$HOME/.local/opt/scripts:$HOME/.local/opt/miktex-bin"
+<<<<<<< HEAD
 
+=======
+# test 2
+>>>>>>> c322547 (Update .zshrc)
