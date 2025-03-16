@@ -9,7 +9,7 @@ setopt extendedglob
 setopt nonomatch
 alias -g b='&> /dev/null'
 #################################################################################
-eval "$(starship init zsh)"
+eval "$(~/.local/bin/starship init zsh)"
 
 # General
 alias cp='cp -i'
