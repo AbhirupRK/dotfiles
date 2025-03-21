@@ -1,7 +1,9 @@
 #################################################################################
-# ZSH Configurations
+## ZSH Configurations
 export ZSH="$HOME/.oh-my-zsh"
-# Standard plugins can be found in $ZSH/plugins/
+## To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+ZSH_THEME="powerlevel10k/powerlevel10k" && [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+## Standard plugins can be found in $ZSH/plugins/
 plugins=(z git zsh-autosuggestions zsh-syntax-highlighting) # (z git zsh-autosuggestions zsh-syntax-highlighting)
 DISABLE_AUTO_UPDATE="true"
 source $ZSH/oh-my-zsh.sh
@@ -9,7 +11,7 @@ setopt extendedglob
 setopt nonomatch
 alias -g b='&> /dev/null'
 #################################################################################
-eval "$(~/.local/bin/starship init zsh)"
+#eval "$(~/.local/bin/starship init zsh)"
 
 # General
 alias cp='cp -i'
@@ -31,14 +33,13 @@ alias g='gnuplot'
 alias p='python3'
 alias pe='pyenv'
 alias co='conda'
-alias mm='micromamba'
-alias mma='micromamba activate'
-alias mmd='micromamba deactivate'
 alias cm='chezmoi'
 alias ce='chezmoi edit --apply'
 
 # MacOS specific
 alias b='brew'
+ve() {/Applications/VESTA.app/Contents/MacOS/VESTA "$1" &> /dev/null &}
+#ql() {qlmanage -p "$1" &> /dev/null}
 
 # Code specific
 #alias rsvasp='rsync -ahP --include={*/,*.cif,*.vasp,POSCAR,POTCAR,INCAR,KPOINTS,EIGENVAL,DOSCAR,PROCAR,OUTCAR*} --exclude="*"'
@@ -52,7 +53,6 @@ alias sleonardo='ssh aroykarm@login.leonardo.cineca.it'
 alias sg100='ssh aroykarm@login.g100.cineca.it'
 alias sps-remote='ssh ps-remote'
 
-ve() {/Applications/VESTA.app/Contents/MacOS/VESTA "$1" &> /dev/null &}
 
 export OMP_NUM_THREADS=2
 
@@ -72,6 +72,7 @@ else
 fi
 unset __mamba_setup
 # <<< mamba initialize <<<
+alias mm='micromamba'; alias mma='micromamba activate'; alias mmd='micromamba deactivate'
 
 # Environment variables
 export PATH=$PATH:"$HOME/.local/bin:$HOME/.local/opt/scripts:$HOME/.local/opt/miktex-bin"
