@@ -39,7 +39,7 @@ alias ce='chezmoi edit --apply'
 # MacOS specific
 alias b='brew'
 ve() {/Applications/VESTA.app/Contents/MacOS/VESTA "$1" &> /dev/null &}
-#ql() {qlmanage -p "$1" &> /dev/null}
+ql() {qlmanage -p "$1" &> /dev/null}
 
 # Code specific
 #alias rsvasp='rsync -ahP --include={*/,*.cif,*.vasp,POSCAR,POTCAR,INCAR,KPOINTS,EIGENVAL,DOSCAR,PROCAR,OUTCAR*} --exclude="*"'
