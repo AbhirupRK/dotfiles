@@ -20,7 +20,8 @@ augroup preserve_cursor
         \ endif
 augroup END
 
-set number
+" Show line number by default
+"set number
 
 " Keybindings
 nnoremap q :q<CR>

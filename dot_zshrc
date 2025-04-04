@@ -54,7 +54,7 @@ alias sg100='ssh aroykarm@login.g100.cineca.it'
 alias sps-remote='ssh ps-remote'
 
 
-export OMP_NUM_THREADS=2
+export OMP_NUM_THREADS=1
 
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
