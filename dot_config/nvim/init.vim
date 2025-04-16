@@ -22,7 +22,9 @@ augroup END
 
 " Show line number by default
 "set number
+set nowrap
 
 " Keybindings
 nnoremap q :q<CR>
 nnoremap L :set number!<CR>
+nnoremap W :set wrap!<CR>:echo "Text wraping is now " . (&wrap ? "ON" : "OFF")<CR>
