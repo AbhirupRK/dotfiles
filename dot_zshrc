@@ -37,9 +37,30 @@ alias tl='tmux list-sessions'
 alias tkill='tmux kill-session'
 
 # Code specific
+<<<<<<< HEAD
 alias jobveryclean='rm ^(*.sh|*.py|*.job|*.txt|*.cif|INCAR*|KPOINTS*|POSCAR*|POTCAR*|*.fdf*|*.psml|*.psf|*.in*|*.win*|*bak|*old)'
 alias rsvasp='rsync -ahP --max-size=5m --include={*/,*.dat,*.sh,*.py,*.job,*.txt,*.cif,INCAR*,KPOINTS*,POSCAR*,POTCAR*,*.fdf*,*.psml,*.psf,*.in*,*.win*,*bak,*old} --exclude="*"'
 #alias rsvasp='rsync -ahP --append-verify --max-size=2g --exclude={CHG,CHGCAR,WAVECAR,*.amn,*.mmn,slurm-*,.*}'
+=======
+#alias rsvasp='rsync -ahP --include={*/,*.cif,*.vasp,POSCAR,POTCAR,INCAR,KPOINTS,EIGENVAL,DOSCAR,PROCAR,OUTCAR*} --exclude="*"'
+alias rsvasp='rsync -ahP --append-verify --max-size=2g --exclude={CHG,CHGCAR,WAVECAR,*.amn,*.mmn,slurm-*,.*}'
+
+# Lab specific
+alias cdd='cd $HOME/Downloads'
+alias cdn='cd /Volumes/sshfs/nfshome'
+alias shilbert='ssh hilbert'
+alias sleonardo='ssh aroykarm@login.leonardo.cineca.it'
+alias sg100='ssh aroykarm@login.g100.cineca.it'
+alias sps-remote='ssh ps-remote'
+alias step-cineca='step ssh login "abhirup.roykarmakar@unimi.it" --provisioner cineca-hpc'
+
+
+export OMP_NUM_THREADS=1
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+>>>>>>> 0962c5d (Update .config/Proxy/unimi_custom.pac)
 
 # >>> mamba initialize >>>
 # !! Contents within this block are managed by 'micromamba shell init' !!
