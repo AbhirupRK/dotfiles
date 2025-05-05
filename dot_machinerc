@@ -1,0 +1,19 @@
+# Machine specific configurations
+
+# MacOS specific
+alias b='brew'
+ve() {/Applications/VESTA.app/Contents/MacOS/VESTA "$1" &> /dev/null &}
+ql() {qlmanage -p "$1" &> /dev/null}
+
+# Lab specific
+alias cdd='cd $HOME/Downloads'
+alias cdn='cd /Volumes/sshfs/nfshome'
+alias sps-remote='ssh ps-remote'
+alias shilbert='ssh hilbert'
+alias sleonardo='ssh aroykarm@login.leonardo.cineca.it'
+alias sg100='ssh aroykarm@login.g100.cineca.it'
+
+export OMP_NUM_THREADS=1
+
+export PATH=$PATH:"$HOME/.local/opt/miktex-bin"
+
