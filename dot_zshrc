@@ -11,6 +11,7 @@ setopt extendedglob
 setopt nonomatch
 alias -g b='&> /dev/null'
 #################################################################################
+source "$HOME/.machinerc"
 #eval "$(~/.local/bin/starship init zsh)"
 
 # General
@@ -30,33 +31,14 @@ alias txz='tar -xzvf'
 
 alias v='nvim'
 alias bt='btop'
-alias htu='htop -u $USER'
-alias g='gnuplot'
 alias p='python3'
 alias pe='pyenv'
 alias co='conda'
-alias cm='chezmoi'
-alias ce='chezmoi edit --apply'
-
-# MacOS specific
-alias b='brew'
-ve() {/Applications/VESTA.app/Contents/MacOS/VESTA "$1" &> /dev/null &}
-ql() {qlmanage -p "$1" &> /dev/null}
 
 # Code specific
-#alias rsvasp='rsync -ahP --include={*/,*.cif,*.vasp,POSCAR,POTCAR,INCAR,KPOINTS,EIGENVAL,DOSCAR,PROCAR,OUTCAR*} --exclude="*"'
-alias rsvasp='rsync -ahP --append-verify --max-size=2g --exclude={CHG,CHGCAR,WAVECAR,*.amn,*.mmn,slurm-*,.*}'
-
-# Lab specific
-alias cdd='cd $HOME/Downloads'
-alias cdn='cd /Volumes/sshfs/nfshome'
-alias shilbert='ssh hilbert'
-alias sleonardo='ssh aroykarm@login.leonardo.cineca.it'
-alias sg100='ssh aroykarm@login.g100.cineca.it'
-alias sps-remote='ssh ps-remote'
-
-
-export OMP_NUM_THREADS=1
+alias jobveryclean='rm ^(*.sh|*.py|*.job|*.txt|*.cif|INCAR*|KPOINTS*|POSCAR*|POTCAR*|*.fdf*|*.psml|*.psf|*.in*|*.win*|*bak|*old)'
+alias rsvasp='rsync -ahP --max-size=5m --include={*/,*.dat,*.sh,*.py,*.job,*.txt,*.cif,INCAR*,KPOINTS*,POSCAR*,POTCAR*,*.fdf*,*.psml,*.psf,*.in*,*.win*,*bak,*old} --exclude="*"'
+#alias rsvasp='rsync -ahP --append-verify --max-size=2g --exclude={CHG,CHGCAR,WAVECAR,*.amn,*.mmn,slurm-*,.*}'
 
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
@@ -64,8 +46,8 @@ eval "$(pyenv init - zsh)"
 
 # >>> mamba initialize >>>
 # !! Contents within this block are managed by 'micromamba shell init' !!
-export MAMBA_EXE='/Users/abhirup/.local/bin/micromamba';
-export MAMBA_ROOT_PREFIX='/Users/abhirup/.local/share/mamba';
+export MAMBA_EXE="$HOME/.local/bin/micromamba";
+export MAMBA_ROOT_PREFIX="$HOME/.local/share/mamba";
 __mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__mamba_setup"
@@ -77,5 +59,5 @@ unset __mamba_setup
 alias mm='micromamba'; alias mma='micromamba activate'; alias mmd='micromamba deactivate'
 
 # Environment variables
-export PATH=$PATH:"$HOME/.local/bin:$HOME/.local/opt/scripts:$HOME/.local/opt/miktex-bin"
+export PATH=$PATH:"$HOME/.local/bin:$HOME/.local/opt/scripts"
 
