@@ -57,4 +57,4 @@ alias mm='micromamba'; alias mma='micromamba activate'; alias mmd='micromamba de
 
 # Environment variables
 export PATH="$HOME/.local/bin:$HOME/.local/opt/scripts:$HOME/.local/share/mamba/bin":$PATH
-
+#
