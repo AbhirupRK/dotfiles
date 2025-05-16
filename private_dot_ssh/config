@@ -25,6 +25,8 @@ Host ps-remote
 Host leonardo
   HostName login.leonardo.cineca.it
   User aroykarm
+  StrictHostKeyChecking no
+  UserKnownHostsFile=/dev/null
 
 Host g100
   HostName login.g100.cineca.it

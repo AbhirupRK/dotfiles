@@ -11,8 +11,8 @@ setopt extendedglob
 setopt nonomatch
 alias -g b='&> /dev/null'
 #################################################################################
-source "$HOME/.machinerc"
 #eval "$(~/.local/bin/starship init zsh)"
+source "$HOME/.machinerc"
 
 # General
 alias cp='cp -i'
