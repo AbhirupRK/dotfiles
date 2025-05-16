@@ -5,6 +5,10 @@ alias b='brew'
 ve() {/Applications/VESTA.app/Contents/MacOS/VESTA "$1" &> /dev/null &}
 ql() {qlmanage -p "$1" &> /dev/null}
 
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+
 # Lab specific
 alias cdd='cd $HOME/Downloads'
 alias cdn='cd /Volumes/sshfs/nfshome'
