@@ -28,12 +28,14 @@ alias h='head -n 30'
 alias t='tail -n 30'
 alias tx='tar -xvf'
 alias txz='tar -xzvf'
-
 alias v='nvim'
-alias bt='btop'
 alias p='python3'
-alias pe='pyenv'
-alias co='conda'
+
+# Tmux
+alias tn='tmux new-session'
+alias ta='tmux attach-session'
+alias tl='tmux list-sessions'
+alias tkill='tmux kill-session'
 
 # Code specific
 alias jobveryclean='rm ^(*.sh|*.py|*.job|*.txt|*.cif|INCAR*|KPOINTS*|POSCAR*|POTCAR*|*.fdf*|*.psml|*.psf|*.in*|*.win*|*bak|*old)'
