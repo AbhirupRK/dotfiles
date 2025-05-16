@@ -20,9 +20,9 @@ augroup preserve_cursor
         \ endif
 augroup END
 
-" Show line number by default
 "set number
 set nowrap
+set mouse=
 
 " Keybindings
 nnoremap q :q<CR>
