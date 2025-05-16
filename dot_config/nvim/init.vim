@@ -1,3 +1,5 @@
+source $HOME/.vimrc
+
 call plug#begin()
 "Plug 'tpope/vim-sensible'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
@@ -20,11 +22,11 @@ augroup preserve_cursor
         \ endif
 augroup END
 
-"set number
-set nowrap
-set mouse=
-
-" Keybindings
-nnoremap q :q<CR>
-nnoremap L :set number!<CR>
-nnoremap W :set wrap!<CR>:echo "Text wraping is now " . (&wrap ? "ON" : "OFF")<CR>
+""set number
+"set nowrap
+"set mouse=
+"
+"" Keybindings
+"nnoremap q :q<CR>
+"nnoremap L :set number!<CR>
+"nnoremap W :set wrap!<CR>:echo "Text wraping is now " . (&wrap ? "ON" : "OFF")<CR>

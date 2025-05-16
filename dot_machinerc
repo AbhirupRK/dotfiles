@@ -1,6 +1,7 @@
 # Machine specific configurations
 
 # MacOS specific
+alias v='nvim'
 alias b='brew'
 ve() {/Applications/VESTA.app/Contents/MacOS/VESTA "$1" &> /dev/null &}
 ql() {qlmanage -p "$1" &> /dev/null}

@@ -28,7 +28,6 @@ alias h='head -n 30'
 alias t='tail -n 30'
 alias tx='tar -xvf'
 alias txz='tar -xzvf'
-alias v='nvim'
 alias p='python3'
 
 # Tmux
