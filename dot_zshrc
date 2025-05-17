@@ -10,7 +10,7 @@ DISABLE_AUTO_UPDATE="true"
 source $ZSH/oh-my-zsh.sh
 setopt extendedglob
 setopt nonomatch
-alias -g b='&> /dev/null'
+alias -g q='&> /dev/null'
 #################################################################################
 #eval "$(~/.local/bin/starship init zsh)"
 
