@@ -1,4 +1,4 @@
-source "$HOME/.machinerc"
+[[ -f "$HOME/.machinerc" ]] && source "$HOME/.machinerc"
 #################################################################################
 ## ZSH Configurations
 export ZSH="$HOME/.oh-my-zsh"
