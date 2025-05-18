@@ -2,7 +2,7 @@
 echo -e "\n*** INSTALLING MISSING PROGRAMS ***"
 
 ### Install Oh-My-ZSH
-if ! command -v omz >/dev/null 2>&1; then
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
     echo "Oh-My-ZSH is not installed. Running installer script..."
     sh -c "$(curl -fsSL https://install.ohmyz.sh/)"
     git clone https://github.com/zsh-users/zsh-autosuggestions.git $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
