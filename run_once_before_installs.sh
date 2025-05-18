@@ -1,4 +1,5 @@
 #!/bin/sh
+echo -e "\n*** INSTALLING MISSING PROGRAMS ***"
 
 ### Install starship
 if ! command -v starship >/dev/null 2>&1; then
