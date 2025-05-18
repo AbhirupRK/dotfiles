@@ -45,7 +45,7 @@ alias rsvasp='rsync -ahP --max-size=5m --include={*/,*.dat,*.sh,*.py,*.job,*.txt
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
-alias pe='pyenv' ; alias pea='pyenv activate' ; alias ped='pyenv deactivate' ; alias pes='pyenv shell'
+alias pe='pyenv'; alias pea='pyenv activate'; alias ped='pyenv deactivate'; alias pes='pyenv shell'
 
 # >>> mamba initialize >>>
 # !! Contents within this block are managed by 'micromamba shell init' !!
