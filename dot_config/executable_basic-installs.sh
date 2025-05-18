@@ -25,4 +25,4 @@ else
     echo "micromamba is already installed. Skipping installation."
 fi
 
-
+echo -e "\n*** PLEASE RESTART THIS SHELL TO APPLY NEW INSTALLATIONS ***"
