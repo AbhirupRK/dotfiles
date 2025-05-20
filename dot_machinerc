@@ -7,6 +7,7 @@ ve() {/Applications/VESTA.app/Contents/MacOS/VESTA "$1" &> /dev/null &}
 ql() {qlmanage -p "$1" &> /dev/null}
 
 # Lab specific aliases
+alias cdc='cd $HOME/Documents/Codes'
 alias cdd='cd $HOME/Downloads'
 alias cdn='cd /Volumes/sshfs/nfshome'
 alias sps-remote='ssh ps-remote'
