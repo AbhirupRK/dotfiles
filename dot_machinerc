@@ -9,6 +9,8 @@ ql() {qlmanage -p "$1" &> /dev/null}
 # Lab specific aliases
 alias cdc='cd $HOME/Documents/Codes'
 alias cdd='cd $HOME/Downloads'
+alias cdgd='cd $HOME/Library/CloudStorage/GoogleDrive-abhiruprk@gmail.com/My\ Drive'
+alias cdg='cd /Volumes/sshfs/g100_work'
 alias cdn='cd /Volumes/sshfs/nfshome'
 alias sps-remote='ssh ps-remote'
 alias shilbert='ssh hilbert'
@@ -17,5 +19,6 @@ alias sg100='ssh aroykarm@login.g100.cineca.it'
 
 # Environment variables
 export OMP_NUM_THREADS=1
+export GD="$HOME/Library/CloudStorage/GoogleDrive-abhiruprk@gmail.com/My Drive"
 export PATH=$PATH:"$HOME/.local/opt/miktex-bin"
 
