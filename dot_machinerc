@@ -20,5 +20,6 @@ alias sg100='ssh aroykarm@login.g100.cineca.it'
 # Environment variables
 export OMP_NUM_THREADS=1
 export GD="$HOME/Library/CloudStorage/GoogleDrive-abhiruprk@gmail.com/My Drive"
+export GWORK="/Volumes/sshfs/g100_work"
 export PATH=$PATH:"$HOME/.local/opt/miktex-bin"
 
