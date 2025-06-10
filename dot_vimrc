@@ -2,7 +2,7 @@
 
 "set number
 set nowrap
-"set mouse=
+set mouse=
 
 " Keybindings
 nnoremap q :q<CR>
