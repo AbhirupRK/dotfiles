@@ -26,6 +26,7 @@ alias t='tail -n 30'
 alias tf='tail -fn 30'
 alias tx='tar -xvf'
 alias txz='tar -xzvf'
+alias curlo='curl -LO'
 alias p='python3'
 alias ce='chezmoi edit --apply'
 
