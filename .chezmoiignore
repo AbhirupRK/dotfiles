@@ -1,6 +1,7 @@
 {{ if ne .chezmoi.os "darwin" }}
 .machinerc
 .config/starship.toml
+.config/topgrade.toml
 .config/texstudio
 .config/texstudio/texstudio.ini
 {{ end }}
