@@ -60,6 +60,10 @@ unset __mamba_setup
 # <<< mamba initialize <<<
 alias mm='micromamba'; alias mma='micromamba activate'; alias mmd='micromamba deactivate'
 
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/abhirup/.lmstudio/bin"
+# End of LM Studio CLI section
+
 # Environment variables
 export LC_ALL="en_US.UTF-8"
 export PATH="$HOME/.local/bin:$HOME/.local/opt/scripts:$HOME/.local/share/mamba/bin":$PATH
