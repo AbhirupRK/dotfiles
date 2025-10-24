@@ -36,38 +36,38 @@ Host g100
 
 Host hilbert
   Hostname 192.168.4.245
-  KexAlgorithms diffie-hellman-group1-sha1
-  HostKeyAlgorithms=+ssh-rsa
-  HostKeyAlgorithms=+ssh-dss
   User abhirup
+# KexAlgorithms diffie-hellman-group1-sha1
+# HostKeyAlgorithms=+ssh-rsa
+# HostKeyAlgorithms=+ssh-dss
 # RequestTTY yes
 # RemoteCommand .local/bin/zsh
 
 Host dcfe136
   Hostname 192.168.4.136
-  KexAlgorithms diffie-hellman-group1-sha1
-  HostKeyAlgorithms=+ssh-rsa
-  HostKeyAlgorithms=+ssh-dss
   User abhirup
+# KexAlgorithms diffie-hellman-group1-sha1
+# HostKeyAlgorithms=+ssh-rsa
+# HostKeyAlgorithms=+ssh-dss
 # RequestTTY yes
 # RemoteCommand .local/bin/zsh
 
 Host hilbert-fw
   Hostname istm-fw.istm.cnr.it
-  KexAlgorithms diffie-hellman-group1-sha1
-  HostKeyAlgorithms=+ssh-rsa
-  HostKeyAlgorithms=+ssh-dss
   User abhirup
   Port 2226
+# KexAlgorithms diffie-hellman-group1-sha1
+# HostKeyAlgorithms=+ssh-rsa
+# HostKeyAlgorithms=+ssh-dss
 # RequestTTY yes
 # RemoteCommand .local/bin/zsh
 
 Host dcfe136-fw
   Hostname istm-fw.istm.cnr.it
-  KexAlgorithms diffie-hellman-group1-sha1
-  HostKeyAlgorithms=+ssh-rsa
-  HostKeyAlgorithms=+ssh-dss
   User abhirup
   Port 2227
+# KexAlgorithms diffie-hellman-group1-sha1
+# HostKeyAlgorithms=+ssh-rsa
+# HostKeyAlgorithms=+ssh-dss
 # RequestTTY yes
 # RemoteCommand .local/bin/zsh
