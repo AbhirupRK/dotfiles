@@ -7,26 +7,28 @@ Host mac-mini
   Hostname mac-mini
   User abhirup
 
-Host aws
-  HostName 13.233.246.99
-  User ubuntu
-  Port 22
-  IdentityFile ~/.ssh/aws.pem
 
-Host ps
-  HostName 10.171.17.201
-  User 18ts91r01
+##### Sweden #####
+
+Host dardel
+  Hostname dardel.pdc.kth.se
+  User abhirup
+  IdentityFile ~/.ssh/id-ed25519-pdc
+
+Host tetralith
+  Hostname tetralith.nsc.liu.se
+  User x_abhro
+
+
+##### OLD: India #####
 
 Host ps-remote
   HostName paramshakti.iitkgp.ac.in
   User 18ts91r01
   Port 4422
 
-Host leonardo
-  HostName login.leonardo.cineca.it
-  User aroykarm
-  StrictHostKeyChecking no
-  UserKnownHostsFile=/dev/null
+
+##### OLD: Italy #####
 
 Host g100
   HostName login.g100.cineca.it
@@ -34,40 +36,46 @@ Host g100
   StrictHostKeyChecking no
   UserKnownHostsFile=/dev/null
 
+Host leonardo
+  HostName login.leonardo.cineca.it
+  User aroykarm
+  StrictHostKeyChecking no
+  UserKnownHostsFile=/dev/null
+
 Host hilbert
   Hostname 192.168.4.245
   User abhirup
-# KexAlgorithms diffie-hellman-group1-sha1
-# HostKeyAlgorithms=+ssh-rsa
-# HostKeyAlgorithms=+ssh-dss
-# RequestTTY yes
-# RemoteCommand .local/bin/zsh
+  RequestTTY yes
+  RemoteCommand .local/bin/zsh
+  KexAlgorithms +diffie-hellman-group1-sha1
+  HostKeyAlgorithms +ssh-rsa
+  PubkeyAcceptedKeyTypes +ssh-rsa
 
 Host dcfe136
   Hostname 192.168.4.136
   User abhirup
-# KexAlgorithms diffie-hellman-group1-sha1
-# HostKeyAlgorithms=+ssh-rsa
-# HostKeyAlgorithms=+ssh-dss
-# RequestTTY yes
-# RemoteCommand .local/bin/zsh
+  RequestTTY yes
+  RemoteCommand .local/bin/zsh
+  KexAlgorithms +diffie-hellman-group1-sha1
+  HostKeyAlgorithms +ssh-rsa
+  PubkeyAcceptedKeyTypes +ssh-rsa
 
 Host hilbert-fw
   Hostname istm-fw.istm.cnr.it
   User abhirup
   Port 2226
-# KexAlgorithms diffie-hellman-group1-sha1
-# HostKeyAlgorithms=+ssh-rsa
-# HostKeyAlgorithms=+ssh-dss
-# RequestTTY yes
-# RemoteCommand .local/bin/zsh
+  RequestTTY yes
+  RemoteCommand .local/bin/zsh
+  KexAlgorithms +diffie-hellman-group1-sha1
+  HostKeyAlgorithms +ssh-rsa
+  PubkeyAcceptedKeyTypes +ssh-rsa
 
 Host dcfe136-fw
   Hostname istm-fw.istm.cnr.it
   User abhirup
   Port 2227
-# KexAlgorithms diffie-hellman-group1-sha1
-# HostKeyAlgorithms=+ssh-rsa
-# HostKeyAlgorithms=+ssh-dss
-# RequestTTY yes
-# RemoteCommand .local/bin/zsh
+  RequestTTY yes
+  RemoteCommand .local/bin/zsh
+  KexAlgorithms +diffie-hellman-group1-sha1
+  HostKeyAlgorithms +ssh-rsa
+  PubkeyAcceptedKeyTypes +ssh-rsa
