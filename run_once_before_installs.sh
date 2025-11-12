@@ -20,13 +20,13 @@ else
 fi
 
 ### Install Pyenv
-if ! command -v pyenv >/dev/null 2>&1; then
-    echo "Pyenv is not installed. Running installer script..."
-    curl -fsSL https://pyenv.run | bash
-    git clone https://github.com/pyenv/pyenv-virtualenv.git $HOME/.pyenv/plugins/pyenv-virtualenv
-else
-    echo "Pyenv is already installed. Skipping installation."
-fi
+#if ! command -v pyenv >/dev/null 2>&1; then
+#    echo "Pyenv is not installed. Running installer script..."
+#    curl -fsSL https://pyenv.run | bash
+#    git clone https://github.com/pyenv/pyenv-virtualenv.git $HOME/.pyenv/plugins/pyenv-virtualenv
+#else
+#    echo "Pyenv is already installed. Skipping installation."
+#fi
 
 ### Install Micromamba
 if ! command -v micromamba >/dev/null 2>&1; then
