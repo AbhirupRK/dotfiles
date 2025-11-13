@@ -14,6 +14,7 @@ Host dardel
   Hostname dardel.pdc.kth.se
   User abhirup
   IdentityFile ~/.ssh/id-ed25519-pdc
+# RemoteCommand /bin/bash
 
 Host tetralith
   Hostname tetralith.nsc.liu.se
