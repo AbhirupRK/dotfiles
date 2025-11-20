@@ -1,25 +1,23 @@
 # Machine specific configurations
 
-# MacOS specific aliases
+# Mac specific 
+export ICLOUD="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
+export GDRIVE="$HOME/Library/CloudStorage/GoogleDrive-abhiruprk@gmail.com/My Drive"
+export PATH=$PATH:"$HOME/.local/opt/miktex-bin"
+
 alias v='nvim'
 alias b='brew'
 ve() {/Applications/VESTA.app/Contents/MacOS/VESTA "$1" &> /dev/null &}
 ql() {qlmanage -p "$1" &> /dev/null}
 
-# Lab specific aliases
-alias cdc='cd $HOME/Documents/Codes'
+alias cdc='cd $HOME/Codes'
 alias cdd='cd $HOME/Downloads'
-alias cdgd='cd $HOME/Library/CloudStorage/GoogleDrive-abhiruprk@gmail.com/My\ Drive'
-alias cdg='cd /Volumes/sshfs/g100_work'
-alias cdn='cd /Volumes/sshfs/nfshome'
-alias sps-remote='ssh ps-remote'
-alias shilbert='ssh hilbert'
-alias sleonardo='ssh aroykarm@login.leonardo.cineca.it'
-alias sg100='ssh aroykarm@login.g100.cineca.it'
+alias cdic='cd $ICLOUD'
+alias cdgd='cd $GDRIVE'
 
-# Environment variables
+
+# Work specific
 export OMP_NUM_THREADS=1
-export ICLOUD="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
-export GDRIVE="$HOME/Library/CloudStorage/GoogleDrive-abhiruprk@gmail.com/My Drive"
-export PATH=$PATH:"$HOME/.local/opt/miktex-bin"
+export DARDELPROJECT="/Volumes/sshfs/dardel_project"
 
+alias cddp='cd $DARDELPROJECT'
