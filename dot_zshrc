@@ -37,7 +37,7 @@ alias tl='tmux list-sessions'
 alias tkill='tmux kill-session'
 
 # Code specific
-alias jobveryclean='rm -rf out/ && rm ^(*.sh|*.py|*.job|*.txt|*.cif|INCAR*|KPOINTS*|POSCAR*|POTCAR*|*.fdf*|*.psml|*.psf|*.in*|*.win*|*bak|*old)'
+alias jobveryclean='rm -rf out/ && rm ^(*.sh|*.py|*.job|*.txt|*.cif|INCAR*|KPOINTS*|POSCAR*|POTCAR*|*.fdf*|*.psml|*.psf|*.in*|*.win*|*bak|*old|*.pdf|*.png)'
 alias rsvasp='rsync -ahP --max-size=5m --include={*/,*.dat,*.sh,*.py,*.job,*.txt,*.cif,INCAR*,KPOINTS*,POSCAR*,POTCAR*,*.fdf*,*.psml,*.psf,*.in*,*.win*,*bak,*old} --exclude="*"'
 #alias rsvasp='rsync -ahP --append-verify --max-size=2g --exclude={CHG,CHGCAR,WAVECAR,*.amn,*.mmn,slurm-*,.*}'
 
