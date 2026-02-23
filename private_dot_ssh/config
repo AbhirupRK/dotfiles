@@ -15,6 +15,11 @@ Host dardel
   User abhirup
   IdentityFile ~/.ssh/id-ed25519-pdc
 
+Host dardel-ftn
+  Hostname dardel-ftn01.pdc.kth.se
+  User abhirup
+  IdentityFile ~/.ssh/id-ed25519-pdc
+
 Host dardel-kerberos
   Hostname dardel.pdc.kth.se
   User abhirup
