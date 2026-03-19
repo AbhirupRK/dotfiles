@@ -45,4 +45,3 @@ alias rsvasp='rsync -ahP --max-size=5m --include={*/,*.dat,*.sh,*.py,*.job,*.txt
 export LC_ALL="en_US.UTF-8"
 export PATH="$HOME/.venvs/base/bin:$HOME/.local/bin:$HOME/.local/opt/scripts":$PATH
 
-#
