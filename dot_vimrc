@@ -2,7 +2,8 @@
 
 " Set number
 set nowrap
-set mouse=
+"set mouse=
+set mousescroll=ver:1
 
 " Keybindings
 nnoremap q :q<CR>
