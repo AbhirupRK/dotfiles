@@ -1,13 +1,11 @@
-Host *
-  ForwardAgent yes
-  ForwardX11 yes
-  ForwardX11Trusted yes
+#Host *
+#  ForwardAgent yes
+#  ForwardX11 yes
+#  ForwardX11Trusted yes
 
 Host mac-mini
   Hostname mac-mini
   User abhirup
-  ForwardX11 no
-  ForwardX11Trusted no
 
 
 ##### Sweden #####
