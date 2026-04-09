@@ -7,6 +7,7 @@ Host mac-mini
   Hostname mac-mini
   User abhirup
   ForwardX11 no
+  ForwardX11Trusted no
 
 
 ##### Sweden #####
