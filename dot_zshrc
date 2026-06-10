@@ -9,6 +9,7 @@ setopt extendedglob
 setopt nonomatch
 alias -g q='&> /dev/null'
 #################################################################################
+[ -n "$SSH_CONNECTION" ] && export STARSHIP_CONFIG=~/.config/starship_ssh.toml
 eval "$(~/.local/bin/starship init zsh)"
 
 # General
