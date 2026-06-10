@@ -19,6 +19,8 @@ $time\
 # move the rest of the prompt to the right
 right_format = """$all"""
 
+command_timeout = 2000
+
 # Disable the blank line at the start of the prompt
 # add_newline = false
 
