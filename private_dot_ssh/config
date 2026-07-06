@@ -10,6 +10,11 @@ Host mac-mini
 
 ##### Sweden #####
 
+Host arrhenius
+  Hostname login.hpc.arrhenius.naiss.se
+  User abhirup
+  IdentityFile ~/.ssh/id-ed25519-pdc
+
 Host dardel
   Hostname dardel.pdc.kth.se
   User abhirup
