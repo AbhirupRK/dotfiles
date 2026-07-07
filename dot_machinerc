@@ -17,8 +17,9 @@ alias cdgd='cd $GDRIVE'
 
 # Work specific
 export OMP_NUM_THREADS=1
- export DARDELPROJECT="/Volumes/sshfs/dardel_project"
- export ARRHENIUSPROJECT="/Volumes/sshfs/arrhenius_project"
+export OPENBLAS_NUM_THREADS=1
+export DARDELPROJECT="/Volumes/sshfs/dardel_project"
+export ARRHENIUSPROJECT="/Volumes/sshfs/arrhenius_project"
 
- alias cddp='cd $DARDELPROJECT'
- alias cdap='cd $ARRHENIUSPROJECT'
+alias cddp='cd $DARDELPROJECT'
+alias cdap='cd $ARRHENIUSPROJECT'

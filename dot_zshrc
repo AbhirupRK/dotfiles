@@ -7,7 +7,7 @@ DISABLE_AUTO_UPDATE="true"
 source $ZSH/oh-my-zsh.sh
 setopt extendedglob
 setopt nonomatch
-alias -g q='&> /dev/null'
+alias -g bd='< /dev/null & disown'
 #################################################################################
 [ -n "$SSH_CONNECTION" ] && export STARSHIP_CONFIG=~/.config/starship_ssh.toml
 eval "$(~/.local/bin/starship init zsh)"
