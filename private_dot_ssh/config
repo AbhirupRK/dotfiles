@@ -34,9 +34,9 @@ Host dardel-kerberos
   Hostname dardel.pdc.kth.se
   User abhirup
   GSSAPIAuthentication yes
-  # Kerberos login first:
+  # Kerberos login first (once):
   # kinit abhirup@NADA.KTH.SE
-  # Password: mf37eY6BKLRx
+  # Enter password
 
 Host tetralith
   Hostname tetralith.nsc.liu.se
