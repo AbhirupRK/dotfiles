@@ -1,0 +1,80 @@
+#!python3
+#%% Plots band structure from VASPKIT output
+import os
+import argparse
+import numpy as np
+from matplotlib import pyplot as plt
+
+parser = argparse.ArgumentParser(description="Plots band structure from VASPKIT output")
+parser.add_argument("--range", type=float, help='Lower and upper energy value separeted by space (e.g. -5.5 5.5)', nargs=2, default=(-5.5,5.5))
+parser.add_argument("--tag", type=str, help='Tag for the plot (e.g. "MoS2-SOC")', default="")
+parser.add_argument("--gui", type=int, help='Whether to show interactive plot (Values: 0 or 1)', default=1)
+args = parser.parse_args()
+
+###############################################################################
+# Changes to be made only in this block
+###############################################################################
+
+wdir='./'
+tag = args.tag
+outfile = wdir+f"bands.pdf"
+
+## VASP
+bands_file = "BAND.dat"
+lw_vasp = 2
+lc_vasp = 'blue'
+ls_vasp = 'solid'
+
+## Plot
+ymin, ymax = tuple(args.range)
+fontsize = 15
+
+###############################################################################
+
+## Vaspkit
+bands = np.loadtxt(wdir+bands_file)
+nkpts = int(os.popen("grep 'NKPTS & NBANDS' "+str(wdir+bands_file)+" | awk '{print $5}'").read())
+nbands = int(os.popen("grep 'NKPTS & NBANDS' "+str(wdir+bands_file)+" | awk '{print $6}'").read())
+kpath = np.genfromtxt(wdir+"KLABELS", dtype='str', skip_header=1, comments='*')
+klabels = kpath[:,0]
+#klabels = [r'$\Gamma$', r'$X$', r'$M$', r'$\Gamma$', r'$R$', r'$X$']
+
+if args.gui==0:
+    import matplotlib
+    matplotlib.use("Agg")
+
+plt.figure(figsize=(10,6))
+plt.title(f"{tag} Band Structure", fontsize=fontsize)
+plt.xticks(kpath[:,1].astype(float), [s for s in klabels])
+# plt.yticks([-0.5,-0.25,0,0.25,0.5], ["-0.5", "", "0", "", "0.5"])
+plt.locator_params(axis='y', nbins=5)
+plt.vlines(plt.xticks()[0], -50, 50, colors='grey', lw=2, alpha=0.5)
+plt.axhline(0, color='grey', lw=2)
+plt.axis(xmin=float(kpath[0,1]),xmax=float(kpath[-1,1]), ymin=ymin, ymax=ymax)
+
+if bands.shape[1]==2:
+    for i in range(nbands):
+        plt.plot(bands[i*nkpts:(i+1)*nkpts,0],bands[i*nkpts:(i+1)*nkpts,1], lw=lw_vasp, color=lc_vasp, linestyle=ls_vasp)
+
+elif bands.shape[1]==3:
+    for i in range(nbands):
+        plt.plot(bands[i*nkpts:(i+1)*nkpts,0],bands[i*nkpts:(i+1)*nkpts,1], lw=lw_vasp, color="red", linestyle=ls_vasp)
+        plt.plot(bands[i*nkpts:(i+1)*nkpts,0],bands[i*nkpts:(i+1)*nkpts,2], lw=lw_vasp, color=lc_vasp, linestyle=ls_vasp)
+
+ax = plt.gca()
+# plt.xlabel("k-path", fontsize=fontsize*0.9)
+# plt.ylabel(r"$ ϵ - ϵ_F $ (eV)", fontsize=fontsize*0.9)
+plt.setp(ax.spines.values(), linewidth=2)
+plt.tick_params(axis='both', direction='in', length=5, width=2, labelsize=fontsize*0.8, bottom=1, top=1, left=1, right=1 )
+plt.tight_layout()
+
+if args.gui==1:
+    plt.savefig(outfile)
+    plt.show()
+elif args.gui==0:
+    plt.savefig(outfile)
+    plt.close()
+else:
+    print('"gui" value should be either 0 or 1. Figure not generated.')
+
+#%%

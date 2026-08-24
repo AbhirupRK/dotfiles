@@ -1,0 +1,31 @@
+#!python
+
+import argparse
+import numpy as np
+import matplotlib.pyplot as plt
+
+parser = argparse.ArgumentParser(description="This script reads a data file and plots the specified columns against each other.")
+parser.add_argument('-xc', '--xcol', type=int, default=1, help='Column index for x-axis data (starts from 1)')
+parser.add_argument('-yc', '--ycol', type=int, default=2, help='Column index for y-axis data (starts from 1)')
+parser.add_argument('--skip', type=int, default=0, help='Number of header lines to skip in the data file')
+parser.add_argument('filepath', type=str, nargs='?', help='Path to the data file')
+args = parser.parse_args()
+
+file_path = args.filepath
+skip_rows = args.skip  # Adjust this based on your file's header
+xcol = args.xcol - 1  # Convert to 0-based indexing
+ycol = args.ycol - 1  # Convert to 0-based indexing
+
+data = np.loadtxt(file_path, skiprows=skip_rows)
+
+plt.figure()
+
+plt.plot(data[:, xcol], data[:, ycol], color='blue', linewidth=1.5)
+
+ax = plt.gca()
+plt.setp(ax.spines.values(), linewidth=1.5)
+plt.tick_params(axis='both', direction='in', length=5, width=1.5, labelsize=12, bottom=1, top=1, left=1, right=1)
+
+plt.grid(alpha=0.3)
+plt.tight_layout()
+plt.show()

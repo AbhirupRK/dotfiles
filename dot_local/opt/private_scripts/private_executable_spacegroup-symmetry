@@ -1,0 +1,10 @@
+#!python3
+import sys
+import pymatgen as pmg
+from pymatgen.symmetry.analyzer import SpacegroupAnalyzer
+
+structure = pmg.core.Structure.from_file(sys.argv[1])
+finder = SpacegroupAnalyzer(structure)
+
+symdata=finder.get_symmetry_dataset()
+print(symdata)

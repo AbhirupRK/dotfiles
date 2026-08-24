@@ -1,0 +1,15 @@
+#!python3
+#%% Converts VASP POSCAR to CIF using ASE
+
+import sys
+from pathlib import Path
+from ase.io import read, write
+
+source_file = sys.argv[1]  # Get the source file from command line argument
+path_obj = Path(source_file)
+
+structure = read(source_file)
+
+write(f"{path_obj.parent}/{path_obj.stem}.cif", structure, format='cif')
+
+#%%
