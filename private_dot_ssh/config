@@ -10,6 +10,10 @@ Host mac-mini
 
 ##### Sweden #####
 
+Host uppmax
+  Hostname pelle.uppmax.uu.se
+  User abhirup
+
 Host arrhenius
   Hostname login.hpc.arrhenius.naiss.se
   User abhirup
