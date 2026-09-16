@@ -15,16 +15,13 @@ disable = [           # Disable the following
 
 # ignore_failures = ["commands"]
 
-# Cleanup caches and old packages after updates finish
-cleanup = true
+cleanup = true        # Cleanup caches and old packages after updates finish
 
 [brew]
 greedy_cask = true
 autoremove = true
 
-# [mas]    # Upgrade Mac App Store apps (requires `mas` CLI installed via brew)
-# upgrade = true
-
-[commands]    # Custom commands
-# "Update MiKTeX" = "mpm --update"    # Custom update command for miktex packages
+[commands]            # Custom commands
+# "Update MiKTeX" = "mpm --update" # Custom update command for miktex packages
 "Brew cleanup" = "brew cleanup --prune=all"
+
