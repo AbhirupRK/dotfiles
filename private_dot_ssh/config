@@ -13,12 +13,12 @@ Host mac-mini
 Host uppmax
   Hostname pelle.uppmax.uu.se
   User abhirup
-  IdentityFile ~/.ssh/id_ed25519_uppmax
+  IdentityFile ~/.ssh/id_ed25519
 
 Host arrhenius
   Hostname login.hpc.arrhenius.naiss.se
   User abhirup
-  IdentityFile ~/.ssh/id-ed25519-pdc
+  IdentityFile ~/.ssh/id_ed25519
 # ControlMaster auto
 # ControlPath ~/.ssh/control-%r@%h:%p
 # ControlPersist yes
@@ -28,12 +28,12 @@ Host arrhenius
 Host dardel
   Hostname dardel.pdc.kth.se
   User abhirup
-  IdentityFile ~/.ssh/id-ed25519-pdc
+  IdentityFile ~/.ssh/id_ed25519-pdc
 
 Host dardel-ftn
   Hostname dardel-ftn01.pdc.kth.se
   User abhirup
-  IdentityFile ~/.ssh/id-ed25519-pdc
+  IdentityFile ~/.ssh/id_ed25519-pdc
 
 Host dardel-kerberos
   Hostname dardel.pdc.kth.se
@@ -42,6 +42,9 @@ Host dardel-kerberos
   # Kerberos login first (once):
   # kinit abhirup@NADA.KTH.SE
   # Enter password
+
+
+##### OLD: Sweden #####
 
 Host tetralith
   Hostname tetralith.nsc.liu.se
