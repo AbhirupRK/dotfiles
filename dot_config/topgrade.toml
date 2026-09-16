@@ -1,6 +1,6 @@
 [misc]
 pre_sudo = true       # Prompt for sudo once at the beginning
-assume_yes = false    # Don't ask for confirmation before each step
+assume_yes = true     # Don't ask for confirmation before each step
 
 # Disable these steps
 disable = [           # Disable the following
