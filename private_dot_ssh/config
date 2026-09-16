@@ -9,7 +9,6 @@ Host mac-mini
   IdentityFile ~/.ssh/id_ed25519
 
 
-
 ##### Sweden #####
 
 Host uppmax
