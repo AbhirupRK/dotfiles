@@ -13,7 +13,7 @@ Host mac-mini
 Host uppmax
   Hostname pelle.uppmax.uu.se
   User abhirup
-  IdentityFile ~/.ssh/id-ed25519_uppmax
+  IdentityFile ~/.ssh/id_ed25519_uppmax
 
 Host arrhenius
   Hostname login.hpc.arrhenius.naiss.se
