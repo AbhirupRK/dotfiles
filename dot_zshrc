@@ -49,4 +49,5 @@ alias jobveryclean='rm -rf out/ *.OUT core && rm ^(*.sh|*.py|*.job|*.txt|*.cif|I
 # Environment variables
 export LC_ALL="en_US.UTF-8"
 export PATH="$HOME/.venvs/base/bin:$HOME/.local/bin:$HOME/.local/opt/scripts":$PATH
+eval "$(fnm env --use-on-cd --shell zsh)" 	# FNM Node.js env
 
